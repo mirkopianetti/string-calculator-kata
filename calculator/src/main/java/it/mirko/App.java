@@ -18,7 +18,7 @@ public class App {
 		try {
 			if (args.length==0){
 				throw new NullPointerException("L'applicazione deve essere lanciata con un parametro di tipo String");
-				//I successivi parametro non li gestisco
+			
 			}
 		
 			for (String valoreInput: args) {
