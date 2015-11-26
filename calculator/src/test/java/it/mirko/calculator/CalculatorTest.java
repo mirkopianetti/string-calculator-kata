@@ -20,7 +20,7 @@ public class CalculatorTest {
 	@Test
 	public void primoTest() {
 		try {
-			assertEquals(calculator.add("sdaf5s4d5sd4af4sd").longValue(), 22L);
+			assertEquals(22L, calculator.add("sdaf5s4d5sd4af4sd").longValue());
 		} catch (Exception e) {
 			fail();
 		}
@@ -29,7 +29,7 @@ public class CalculatorTest {
 	@Test
 	public void addNullNumTest() {
 		try {
-			assertEquals(calculator.add("").longValue(), 0L);
+			assertEquals(0L, calculator.add("").longValue());
 
 		} catch (Exception e) {
 			fail();
@@ -40,7 +40,7 @@ public class CalculatorTest {
 	@Test
 	public void addOneNumTest() {
 		try {
-			assertEquals(calculator.add("1").longValue(), 1L);
+			assertEquals(1L, calculator.add("1").longValue());
 		} catch (Exception e) {
 			fail();
 		}
@@ -50,7 +50,7 @@ public class CalculatorTest {
 	@Test
 	public void add2Num() {
 		try {
-			assertEquals(calculator.add("1,2").longValue(), 3L);
+			assertEquals(3L, calculator.add("1,2").longValue());
 		} catch (Exception e) {
 			fail();
 		}
@@ -60,7 +60,7 @@ public class CalculatorTest {
 	@Test
 	public void add2NumDecTest() {
 		try {
-			assertEquals(calculator.add("10,21").longValue(), 31L);
+			assertEquals(31L, calculator.add("10,21").longValue());
 		} catch (Exception e) {
 			fail();
 		}
@@ -71,7 +71,7 @@ public class CalculatorTest {
 	public void addNumDecTest() {
 
 		try {
-			assertEquals(calculator.add("1,2,3,4,5,6,7,8,9").longValue(), 45L);
+			assertEquals(45L, calculator.add("1,2,3,4,5,6,7,8,9").longValue());
 		} catch (Exception e) {
 			fail();
 		}
@@ -81,7 +81,7 @@ public class CalculatorTest {
 	@Test
 	public void addNumDelimitersTest() {
 		try {
-			assertEquals(calculator.add("//;\n1;2").longValue(), 3L);
+			assertEquals(3L, calculator.add("//;\n1;2").longValue());
 		} catch (Exception e) {
 			fail();
 		}
@@ -91,7 +91,7 @@ public class CalculatorTest {
 	@Test
 	public void addNumDelimiters_2_Test() {
 		try {
-			assertEquals(calculator.add("//;\n\n\n\n\n;;;1;2").longValue(), 3L);
+			assertEquals(3L, calculator.add("//;\n\n\n\n\n;;;1;2").longValue());
 		} catch (Exception e) {
 			fail();
 		}
@@ -101,7 +101,7 @@ public class CalculatorTest {
 	@Test
 	public void addNumDNewLTest() {
 		try {
-			assertEquals(calculator.add("1\n2,3 ").longValue(), 6L);
+			assertEquals(6L, calculator.add("1\n2,3 ").longValue());
 		} catch (Exception e) {
 			fail();
 		}
@@ -122,7 +122,7 @@ public class CalculatorTest {
 	@Test
 	public void addNumIgnoreBigNumberTest() {
 		try {
-			assertEquals(calculator.add("2;1001").longValue(), 2L);
+			assertEquals(2L, calculator.add("2;1001").longValue());
 		} catch (Exception e) {
 			fail();
 		}
@@ -132,7 +132,7 @@ public class CalculatorTest {
 	@Test
 	public void addNumRandomTest() {
 		try {
-			assertEquals(calculator.add("2%&/%(/&%(/&$%&£&%$$£&£(3)").longValue(), 5L);
+			assertEquals(5L, calculator.add("2%&/%(/&%(/&$%&£&%$$£&£(3)").longValue());
 		} catch (Exception e) {
 			fail();
 		}
